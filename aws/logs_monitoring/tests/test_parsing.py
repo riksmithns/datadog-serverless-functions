@@ -190,6 +190,10 @@ class TestParseEventSource(unittest.TestCase):
             ),
             str(AwsEventSource.WAF),
         )
+        self.assertEqual(
+            parse_event_source({"awslogs": "logs"}, "aws-waf-logs-testing"),
+            str(AwsEventSource.WAF),
+        )
 
     def test_redshift_event(self):
         self.assertEqual(

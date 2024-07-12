@@ -138,6 +138,8 @@ class AwsCwEventSourcePrefix(Enum):
     SNS = ("sns/", AwsEventSource.SNS)
     STEPFUNCTION = ("/aws/vendedlogs/states", AwsEventSource.STEPFUNCTION)
     TRANSITGATEWAY = ("tgw-attach", AwsEventSource.TRANSITGATEWAY)
+    # e.g. aws-waf-logs-log-group-suffix
+    WAF = ("aws-waf-logs", AwsEventSource.WAF)
 
     def __str__(self):
         return f"{self.string}"
